@@ -1,4 +1,5 @@
 import 'package:delimeals/screens/categories/categories_screen.dart';
+import 'package:delimeals/screens/categories/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,10 +24,13 @@ class MyApp extends StatelessWidget {
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
               headline6: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'Quicksand',
-                  fontWeight: FontWeight.bold))),
+                fontSize: 20,
+                fontFamily: 'Quicksand',
+              ))),
       home: CategoriesScreen(),
+      routes: {
+        '/category-meals': (ctx) => CategoryMealsScreen(),
+      },
     );
   }
 }
