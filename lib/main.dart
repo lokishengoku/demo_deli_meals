@@ -1,5 +1,7 @@
-import 'package:delimeals/screens/categories/categories_screen.dart';
-import 'package:delimeals/screens/categories/category_meals_screen.dart';
+import 'package:delimeals/screens/categories_screen.dart';
+import 'package:delimeals/screens/meal_detail_screen.dart';
+import 'package:delimeals/screens/category_meals_screen.dart';
+import 'package:delimeals/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,9 +29,15 @@ class MyApp extends StatelessWidget {
                 fontSize: 20,
                 fontFamily: 'Quicksand',
               ))),
-      home: CategoriesScreen(),
+      // home: CategoriesScreen(),
+      initialRoute: '/',
       routes: {
-        '/category-meals': (ctx) => CategoryMealsScreen(),
+        '/': (ctx) => TabsScreen(),
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
       },
     );
   }
