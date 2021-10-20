@@ -1,4 +1,5 @@
 import 'package:delimeals/screens/categories_screen.dart';
+import 'package:delimeals/screens/filters_screen.dart';
 import 'package:delimeals/screens/meal_detail_screen.dart';
 import 'package:delimeals/screens/category_meals_screen.dart';
 import 'package:delimeals/screens/tabs_screen.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
