@@ -1,4 +1,3 @@
-import 'package:delimeals/data/dummy_meals_data.dart';
 import 'package:delimeals/models/meal.dart';
 import 'package:delimeals/widgets/meal_item.dart';
 import 'package:flutter/material.dart';
@@ -39,11 +38,11 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
     super.didChangeDependencies();
   }
 
-  void _removeMeal(String mealId) {
-    setState(() {
-      displayedMeals.removeWhere((element) => element.id == mealId);
-    });
-  }
+  // void _removeMeal(String mealId) {
+  //   setState(() {
+  //     displayedMeals.removeWhere((element) => element.id == mealId);
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +60,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
               duration: displayedMeals[index].duration,
               complexity: displayedMeals[index].complexity,
               affordability: displayedMeals[index].affordability,
-              removeItemFunction: _removeMeal,
+              // removeItemFunction: _removeMeal,
             );
           },
           itemCount: displayedMeals.length,
